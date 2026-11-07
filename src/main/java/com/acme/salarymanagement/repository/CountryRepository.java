@@ -1,6 +1,8 @@
 
 package com.acme.salarymanagement.repository;
 
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,4 +15,6 @@ public interface CountryRepository
     boolean existsByCountryName(String countryName);
 
     boolean existsByCountryCode(String countryCode);
+
+    Optional<Country> findByCountryName(String countryName);
 }
